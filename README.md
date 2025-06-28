@@ -1,2 +1,2 @@
-# boost cs 2 service
+# boostcs2service.github.io
 
