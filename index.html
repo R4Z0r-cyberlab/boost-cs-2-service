@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BoostService CS2</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">BoostService CS2</h1>
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="#prices">Цены</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#order" class="btn-order">Заказать</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <h2>Лучший сервис по бусту в Counter Strike 2</h2>
+      <p>Прокачай свой ранг быстро и безопасно с профессионалами!</p>
+      <a href="#order" class="btn-primary">Заказать буст</a>
+    </div>
+  </section>
+
+  <section id="services" class="services section">
+    <div class="container">
+      <h2 class="section-title">Наши услуги</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Буст ранга</h3>
+          <p>Поднимем твой ранг быстро и без рисков.</p>
+        </div>
+        <div class="service-card">
+          <h3>Гарантия</h3>
+          <p>Буст происходит в команде с профессионалами имеющими более 3000 elo</p>
+        </div>
+        <div class="service-card">
+          <h3>Турнирная подготовка</h3>
+          <p>Занятые тренировки с опытными бустерами для повышения скилла.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" class="prices section">
+    <div class="container">
+      <h2 class="section-title">Цены</h2>
+      <table class="price-table">
+        <thead>
+          <tr>
+            <th>Услуга</th>
+            <th>Цена</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Буст эло на faciet 100 elo</td><td>250₽</td></tr>
+          <tr><td>буст rating на premier 2500</td><td>300₽</td></tr>
+          <tr><td>Турнирная подготовка (час)</td><td>800₽</td></tr>
+          <tr><td>Ночной буст faciet 300 elo / premier 5000 rating  (со скидкой)</td><td>400₽</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="reviews" class="reviews section">
+    <div class="container">
+      <h2 class="section-title">Отзывы наших клиентов</h2>
+      <div class="reviews-list" id="reviewsList">
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section faq">
+  <div class="container">
+    <h2 class="section-title fade-in">Часто задаваемые вопросы</h2>
+    <div class="faq-list">
+      <div class="faq-item fade-in delay-1">
+        <button class="faq-question" aria-expanded="false">
+          Как быстро я получу заказанный буст?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Обычно мы выполняем буст в течение 24-48 часов, в зависимости от выбранной услуги.
+        </div>
+      </div>
+      <div class="faq-item fade-in delay-2">
+        <button class="faq-question" aria-expanded="false">
+          Насколько безопасна услуга буста?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Мы гарантируем полную безопасность вашего аккаунта, используем проверенных профессионалов и не нарушаем правила игры.
+        </div>
+      </div>
+      <div class="faq-item fade-in delay-3">
+        <button class="faq-question" aria-expanded="false">
+          Можно ли заказать буст ночью со скидкой?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Да, у нас есть специальный "Ночной буст" с приятной скидкой, доступный с 22:00 до 06:00.
+        </div>
+      </div>
+      <div class="faq-item fade-in delay-4">
+        <button class="faq-question" aria-expanded="false">
+          Как оплатить услугу?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer" hidden>
+          Мы принимаем оплату через популярные платёжные системы и банковские карты.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <section id="order" class="order section">
+    <div class="container">
+      <h2 class="section-title">Заказать буст</h2>
+      <form id="orderForm" class="order-form">
+        <label for="username">Ваш ник в CS2:</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="serviceSelect">Выберите услугу:</label>
+        <select id="serviceSelect" name="service" required>
+          <option value="">-- Выберите --</option>
+          <option value="boost_rank">Буст ранга</option>
+          <option value="achievements">Достижения</option>
+          <option value="training">Турнирная подготовка</option>
+          <option value="night_boost">Ночной буст</option>
+        </select>
+
+        <label for="contact">Ваш контакт (email или телефон):</label>
+        <input type="text" id="contact" name="contact" required />
+		<button type="submit" class="btn-primary">Отправить заказ</button>
+      </form>
+      <div id="orderMessage" class="order-message"></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 BoostService CS2. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
